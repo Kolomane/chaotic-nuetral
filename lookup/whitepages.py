@@ -4,12 +4,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
-# https://www.whitepages.com/name/James-Feil/WI?fs=1&searchedName=James%20Feil&searchedLocation=Wisconsin
+# https://www.whitepages.com/name/Firstname-Lastname/WI?fs=1&searchedName=Firstname%20Lastname&searchedLocation=Wisconsin
 # SEARCH in Whitepages
 # WITH each HIT, you need to take the NAME AS SHOWN, SPACES TREATED AS -, NO PUNCTUATION
-# 	/name/James-L-Pfeil/Oshkosh-WI/PkypkXXGg79
-# https://www.whitepages.com/name/George-Feil/Gleason-WI/PX3v2Q0DRL3
-# https://hcaptcha.com/checksiteconfig?v=096d3a6&host=epieos.com&sitekey=7331f5ad-c4dd-40dd-8aaf-a818d77897b6&sc=1&swa=1&spst=0
+# 	/name/Firstname-Lastname/City-WI/UniqueCode
+# https://www.whitepages.com/name/Firstname-Lastname/City-WI/UniqueCode
 
 def main():
     print(f"!!! Start")
