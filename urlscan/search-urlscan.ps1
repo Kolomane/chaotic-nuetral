@@ -16,7 +16,6 @@ function Search-URLScan {
     $baseUrl = 'https://urlscan.io/api/v1' # Static variable for the base URL
     $theEndpoint = '/search/' # Static variable for the endpoint... Yes it's more lines of code but it's a bit more malleable this way :)
     $sizeLimit = 1000 # Max limit for a single Search API call... At least with the Free version of URLScan
-    $maxDailyLimit = 10000 # Daily max limit for URL Scan searching... At least with the Free version of URLScan
     if (-Not($query | Select-String 'q=.*')) {
         $query = "q=$($query)"
     }
@@ -25,7 +24,7 @@ function Search-URLScan {
     # There's a lot going on in the conditional for this IF statement...
     # # IF the MaxLimit specified is within the DAILY maximum limit (see above)
     # # AND IF the output file path is a valid path  -and ((Test-Path $outputLocation))
-    if ((($maxLimit / $maxDailyLimit) -le 1) -and (Test-Path $outputLocation)) {
+    if (Test-Path $outputLocation) {
         $theIterations = [math]::Ceiling($maxLimit / $sizeLimit) # Split the user-defined limit against the API size limit
         $theSize = 1000
         $runningTotal = 0
