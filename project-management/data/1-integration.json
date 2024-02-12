@@ -1,0 +1,30 @@
+{
+    "Developing Project Charter": {
+        "Short": "Stakeholder collaboration to define & authorize project.",
+        "Long": "This process involves working with stakeholders to create a formal document, the project charter, that authorizes the project and outlines its key objectives, scope, and stakeholders. It ensures everyone is aligned on the project's purpose and goals."
+    },
+    "Developing Project Management Plan": {
+        "Short": "Master document: coordinate all planning efforts.",
+        "Long": "This process involves coordinating all planning efforts to create a comprehensive document, the project management plan. This plan details how the project will be executed, monitored, controlled, and closed, serving as the central reference point for all project activities."
+    },
+    "Directing & Managing Project Work": {
+        "Short": "Put the plan into action: execute project tasks.",
+        "Long": "This process involves carrying out the activities outlined in the project management plan. It includes assigning tasks, managing resources, resolving issues, and communicating with stakeholders to ensure the project is executed as planned and meets its objectives."
+    },
+    "Managing Project Knowledge": {
+        "Short": "Leverage knowledge for project success & organizational learning.",
+        "Long": "This process involves utilizing existing knowledge, creating new knowledge, and managing both throughout the project. It includes capturing lessons learned, sharing best practices, and contributing to the organization's overall knowledge base."
+    },
+    "Monitoring & Controlling Project Work": {
+        "Short": "Track progress & make adjustments to stay on track.",
+        "Long": "This process involves regularly measuring and monitoring project progress against the plan. It includes identifying deviations, addressing risks, and taking corrective actions to ensure the project stays on schedule, within budget, and meets its objectives."
+    },
+    "Performing Integrated Change Control": {
+        "Short": "Manage changes effectively throughout the project lifecycle.",
+        "Long": "This process involves identifying, evaluating, and managing all changes to the project throughout its lifecycle. It ensures changes are assessed for impact, approved through defined procedures, and implemented effectively to minimize disruption and maintain project objectives."
+    },
+    "Closing the Project or Phase": {
+        "Short": "Formalize completion & wrap up activities.",
+        "Long": "This process involves finalizing all activities necessary to formally close the project or phase. It includes completing deliverables, obtaining acceptance from stakeholders, documenting lessons learned, and archiving project documentation to ensure a smooth transition and proper closure."
+    }
+}

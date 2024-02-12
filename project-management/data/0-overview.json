@@ -1,0 +1,50 @@
+{
+    "Initiating": {
+        "Description": "Define & authorize project/phase.",
+        "Long Description": "Initiating processes establish the foundation for a project or project phase. They involve defining and authorizing the project, securing necessary approvals, and ensuring stakeholders are aligned. This happens at the start of each phase, including the close-out phase, where it ensures project completion, documentation of lessons learned, and customer acceptance.",
+        "Examples": [
+            "Ensure team completes all work",
+            "Document lessons learned",
+            "Customer acceptance of work"
+        ]
+    },
+    "Planning": {
+        "Description": "Create workable plans for all aspects.",
+        "Long Description": "Planning processes involve developing and maintaining a comprehensive scheme to ensure the project aligns with organizational needs. This includes creating various plans like scope, schedule, cost, and procurement. These plans define how each knowledge area relates to the project at a specific point in time. For example, teams define work needed, schedule activities, estimate costs, and decide on resources. Plans are regularly revised throughout the project life cycle to adapt to changing conditions.",
+        "Examples": [
+            "Scope management plan",
+            "Schedule management plan",
+            "Cost management plan",
+            "Procurement management plan"
+        ],
+        "Revision": "Adaptable: update plans as needed (project & organization)"
+    },
+    "Executing": {
+        "Description": "Coordinate resources & execute plans.",
+        "Long Description": "Executing processes involve putting the plans into action by coordinating people and resources. This includes directing and managing project work, managing project knowledge, acquiring resources, and conducting procurements. Examples include assigning tasks, managing risks, resolving issues, and communicating with stakeholders.",
+        "Examples": [
+            "Direct & manage project work",
+            "Manage project knowledge",
+            "Acquire resources",
+            "Conduct procurements"
+        ]
+    },
+    "Monitoring & Controlling": {
+        "Description": "Track progress & adjust as needed.",
+        "Long Description": "Monitoring and controlling processes involve regularly measuring and monitoring progress to ensure the project meets its objectives. The project manager and team continuously assess progress against the plans and take corrective action when necessary. This may involve identifying risks, managing changes, and making adjustments to stay on track.",
+        "Activities": [
+            "Monitor progress against plans",
+            "Take corrective action",
+            "Report performance to stakeholders"
+        ]
+    },
+    "Closing": {
+        "Description": "Formalize acceptance & close efficiently.",
+        "Long Description": "Closing processes involve formally accepting the project or project phase and officially ending it. This includes administrative activities like archiving project files, documenting lessons learned, and receiving formal acceptance of the delivered work from the customer. Closing ensures a smooth transition to the next phase or marks a successful project completion.",
+        "Activities": [
+            "Archive project files",
+            "Document lessons learned",
+            "Receive formal acceptance of work"
+        ]
+    }
+}
