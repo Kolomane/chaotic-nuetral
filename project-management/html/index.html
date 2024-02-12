@@ -21,24 +21,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
-                        <div class="btn-group">
-                            <a href="#integration-mgmt" type="button" class="nav-link btn btn-sm">Integration</a>
-                            <button type="button" class="nav-link btn btn-sm dropdown-toggle dropdown-toggle-split"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#integration-mgmt-">Selection</a></li>
-                            </ul>
-                        </div>
+                        <a class="nav-link" href="#swot-card">SWOT</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#build">Build</a>
+                        <a class="nav-link" href="#wbs-card">WBS</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deming-card">Deming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cost-of-quality-card">Cost of Quality</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comm-table-card">Comm Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#risk-card">Risk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#procurement-card">Procurement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#stakeholders-card    ">Stakeholders</a>
+                    </li>
                 </ul>
                 <div class="d-flex" role="search">
                     <!-- <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search"> -->
@@ -58,7 +64,7 @@
         <div class="row">
             <div class="col">
 
-                <div class="card mb-3">
+                <div class="card mb-4" id="swot-card">
                     <div class="card-header">
                         <h5 class="fw-bold">
                             SWOT Analysis
@@ -105,15 +111,29 @@
                     </div>
                 </div>
 
-                <div class="card mb-3">
+                <div class="card mb-4" id="wbs-card">
                     <div class="card-header">
                         <h5 class="fw-bold">
-                            W<small class="text-body-secondary">ork</small> B<small class="text-body-secondary">reakdown</small> S<small class="text-body-secondary">heet</small> 
+                            W<small class="text-body-secondary">ork</small> B<small
+                                class="text-body-secondary">reakdown</small> S<small
+                                class="text-body-secondary">heet</small>
                         </h5>
                     </div>
                     <ul class="list-group list-group-flush">
+                        <li class="list-group-item" >
+                            <h6 class="fw-bold">WBS JSON Example</h6>
+                            <pre class="overflow-scroll" style="max-height: 250px"><code id="wbs-json">
+                            </code></pre>
+                        </li>
                         <li class="list-group-item">
-
+                            <h6 class="fw-bold">WBS CSV Example</h6>
+                            <pre class="overflow-scroll" style="max-height: 250px"><code id="wbs-csv">
+                            </code></pre>
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="fw-bold">WBS TXT Example</h6>
+                            <pre class="overflow-scroll" style="max-height: 250px"><code id="wbs-txt">
+                            </code></pre>
                         </li>
                     </ul>
                     <div class="card-footer">
@@ -124,6 +144,251 @@
                                 class="bi bi-filetype-csv"></i> .csv</button>
                         <button id="wbs-export-txt" type="button" class="btn btn-outline-secondary"><i
                                 class="bi bi-filetype-txt"></i> .txt</button>
+                    </div>
+                </div>
+
+                <div class="card mb-4" id="deming-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold">
+                            Deming<small class="text-body-secondary">: 14 Points for Management</small>
+                        </h5>
+                    </div>
+                    <ol class="list-group list-group-flush list-group-numbered">
+                        <li class="list-group-item">Create constancy of purpose for improvement of product and service.
+                        </li>
+                        <li class="list-group-item">Adopt the new philosophy.</li>
+                        <li class="list-group-item">Cease dependence on inspection to achieve quality.</li>
+                        <li class="list-group-item">End the practice of awarding business based on price tag alone.
+                            Minimize
+                            total cost by working with a single supplier.</li>
+                        <li class="list-group-item">Improve constantly and forever every process for planning,
+                            production,
+                            and service.</li>
+                        <li class="list-group-item">Institute training on the job.</li>
+                        <li class="list-group-item">Adopt and institute leadership.</li>
+                        <li class="list-group-item">Drive out fear.</li>
+                        <li class="list-group-item">Break down barriers between staff areas.</li>
+                        <li class="list-group-item">Eliminate slogans, exhortations, and targets for the workforce.</li>
+                        <li class="list-group-item">Eliminate numerical quotas for the workforce and numerical goals for
+                            management.</li>
+                        <li class="list-group-item">Remove barriers that rob people of workmanship. Eliminate the annual
+                            rating or merit system.</li>
+                        <li class="list-group-item">Institute a vigorous program of education and self-improvement for
+                            everyone.</li>
+                        <li class="list-group-item">Put everyone in the company to work to accomplish the
+                            transformation.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="card mb-4" id="cost-of-quality-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold">
+                            Cost of Quality
+                        </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h6 class="fw-bold my-0 mx-0">Preventing Costs</h6>These focus on avoiding errors through
+                            early detection and proactive measures like training, quality studies, and supplier checks.
+                            Investing upfront saves money compared to fixing issues later, as shown by the Y2K bug where
+                            early action could have prevented billions in damages.
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="fw-bold my-0 mx-0">Appraisal Costs</h6>Think inspection costs. They ensure
+                            project quality through checks, tests, and equipment maintenance.
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="fw-bold my-0 mx-0">Internal Failure Costs</h6>These fix discovered errors <bold>
+                                before</bold> reaching the customer. Think scrap, rework, engineering changes, and
+                            documentation fixes.
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="fw-bold my-0 mx-0">External Failure Costs</h6>These are the nasty surprises
+                            customers find. Think warranty claims, lawsuits, complaints, and lost business.
+                        </li>
+                        <li class="list-group-item">
+                            <h6 class="fw-bold my-0 mx-0">Measure & Test Equipment Costs</h6>The upfront investment in
+                            tools for prevention and appraisal activities.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card mb-4" id="comm-table-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold">
+                            Communication Media Appropriateness Table
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">Communication Media</th>
+                                    <th scope="col" class="text-center">Hard Copy</th>
+                                    <th scope="col" class="text-center">Phone Call</th>
+                                    <th scope="col" class="text-center">Voice Mail</th>
+                                    <th scope="col" class="text-center">Email</th>
+                                    <th scope="col" class="text-center">Meeting</th>
+                                    <th scope="col" class="text-center">Website</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Assessing Commitment</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Building Consensus</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Mediating a Conflict</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Resolving a Misunderstanding</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Addressing Negative Behavior</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Expressing Support or Appreciation</th>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Encouraging Creative Thinking</th>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Making an Ironic Statement</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Conveying a Reference Document</th>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Reinforcing One's Authority</th>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Providing a Permanent Record</th>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Maintaining Confidentiality</th>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Conveying Simple Information</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Asking an Informational Question</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Making a Simple Request</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Giving Complex Instructions</th>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Addressing Many People</th>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-warning text-center"><i class="bi bi-circle-half"></i></td>
+                                    <td class="text-danger text-center"><i class="bi bi-circle"></i></td>
+                                    <td class="text-success text-center"><i class="bi bi-circle-fill"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -164,6 +429,154 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        const wbsJson = {
+            "name": "Website Redesign Project",
+            "description": "Redesign and develop a new website for our company",
+            "start_date": "2024-02-13",
+            "due_date": "2024-04-15",
+            "budget": 10000,
+            "tasks": [
+                {
+                    "name": "Planning",
+                    "description": "Define project scope, timeline, and budget",
+                    "duration": 2,
+                    "dependencies": [],
+                    "subtasks": [
+                        {
+                            "name": "Define project objectives",
+                            "duration": 0.5
+                        },
+                        {
+                            "name": "Develop user personas and journey maps",
+                            "duration": 1
+                        },
+                        {
+                            "name": "Create website map and wireframes",
+                            "duration": 1
+                        },
+                        {
+                            "name": "Develop project timeline and budget",
+                            "duration": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Design",
+                    "description": "Create visual design of the website",
+                    "duration": 3,
+                    "dependencies": ["Planning"],
+                    "subtasks": [
+                        {
+                            "name": "Develop style guide and branding",
+                            "duration": 1
+                        },
+                        {
+                            "name": "Design homepage and key pages",
+                            "duration": 1.5
+                        },
+                        {
+                            "name": "Design mobile and responsive layouts",
+                            "duration": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Development",
+                    "description": "Develop and build the website functionality",
+                    "duration": 4,
+                    "dependencies": ["Design"],
+                    "subtasks": [
+                        {
+                            "name": "Front-end development (HTML, CSS, JavaScript)",
+                            "duration": 2
+                        },
+                        {
+                            "name": "Back-end development (API integration, database)",
+                            "duration": 1.5
+                        },
+                        {
+                            "name": "Content management system setup and configuration",
+                            "duration": 0.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Testing and Deployment",
+                    "description": "Test the website functionality and deploy to production",
+                    "duration": 2,
+                    "dependencies": ["Development"],
+                    "subtasks": [
+                        {
+                            "name": "Functional testing and bug fixing",
+                            "duration": 1
+                        },
+                        {
+                            "name": "Performance testing and optimization",
+                            "duration": 0.5
+                        },
+                        {
+                            "name": "Website deployment and launch",
+                            "duration": 0.5
+                        }
+                    ]
+                }
+            ]
+        }
+
+        const wbsCsv = `"Name","Description","Duration","Dependencies","Subtasks"
+"Website Redesign Project","Redesign and develop a new website for our company","10","",""
+"Planning","Define project scope, timeline, and budget","2","",""
+"Define project objectives","","0.5",""
+"Develop user personas and journey maps","","1",""
+"Create website map and wireframes","","1",""
+"Develop project timeline and budget","","0.5",""
+"Design","Create visual design of the website","3","Planning",""
+"Develop style guide and branding","","1",""
+"Design homepage and key pages","","1.5",""
+"Design mobile and responsive layouts","","0.5",""
+"Development","Develop and build the website functionality","4","Design",""
+"Front-end development (HTML, CSS, JavaScript)","","2",""
+"Back-end development (API integration, database)","","1.5",""
+"Content management system setup and configuration","","0.5",""
+"Testing and Deployment","Test the website functionality and deploy to production","2","Development",""
+"Functional testing and bug fixing","","1",""
+"Performance testing and optimization","","0.5",""
+"Website deployment and launch","","0.5",""`
+
+        const wbsTxt = `Project: Website Redesign
+Start Date: 2024-02-13
+Due Date: 2024-04-15
+Budget: $10,000
+
+1. Planning (2 days)
+* 1.1 Define project objectives (0.5 days)
+* 1.2 Develop user personas and journey maps (1 day)
+* 1.3 Create website map and wireframes (1 day)
+* 1.4 Develop project timeline and budget (0.5 days)
+
+2. Design (3 days) (Depends on 1)
+* 2.1 Develop style guide and branding (1 day)
+* 2.2 Design homepage and key pages (1.5 days)
+* 2.3 Design mobile and responsive layouts (0.5 days)
+
+3. Development (4 days) (Depends on 2)
+* 3.1 Front-end development (HTML, CSS, JavaScript) (2 days)
+* 3.2 Back-end development (API integration, database) (1.5 days)
+* 3.3 Content management system setup and configuration (0.5 days)
+
+4. Testing and Deployment (2 days) (Depends on 3)
+* 4.1 Functional testing and bug fixing (1 day)
+* 4.2 Performance testing and optimization (0.5 days)
+* 4.3 Website deployment and launch (0.5 days)
+
+Notes:
+This is a simplified example and can be adapted to your specific project needs.
+The estimated durations are for illustrative purposes only and may vary depending on your resources and scope.
+Dependencies indicate which tasks need to be completed before others can begin.`
+
+        $('#wbs-json').html(JSON.stringify(wbsJson, null, 4))
+        $('#wbs-csv').html(wbsCsv)
+        $('#wbs-txt').html(wbsTxt)
         $('#color-toggle-button').on('click', function () {
             let currentColor = $('html').attr('data-bs-theme')
             if (currentColor == "dark") {
