@@ -106,8 +106,8 @@
                                 class="bi bi-filetype-json"></i> .json</button>
                         <button id="swot-export-csv" type="button" class="btn btn-outline-success"><i
                                 class="bi bi-filetype-csv"></i> .csv</button>
-                        <button id="swot-export-txt" type="button" class="btn btn-outline-secondary"><i
-                                class="bi bi-filetype-txt"></i> .txt</button>
+                        <button id="swot-export-txt" type="button" class="btn btn-outline-secondary">
+                            <i class="bi bi-filetype-txt"></i> .txt</button>
                     </div>
                 </div>
 
@@ -120,7 +120,7 @@
                         </h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" >
+                        <li class="list-group-item">
                             <h6 class="fw-bold">WBS JSON Example</h6>
                             <pre class="overflow-scroll" style="max-height: 250px"><code id="wbs-json">
                             </code></pre>
@@ -574,34 +574,70 @@ This is a simplified example and can be adapted to your specific project needs.
 The estimated durations are for illustrative purposes only and may vary depending on your resources and scope.
 Dependencies indicate which tasks need to be completed before others can begin.`
 
+        function downloadString(text, fileType, fileName) {
+            var blob = new Blob([text], { type: fileType });
+
+            var a = document.createElement('a');
+            a.download = fileName;
+            a.href = URL.createObjectURL(blob);
+            a.dataset.downloadurl = [fileType, a.download, a.href].join(':');
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () { URL.revokeObjectURL(a.href); }, 1500);
+        }
+
         $('#wbs-json').html(JSON.stringify(wbsJson, null, 4))
         $('#wbs-csv').html(wbsCsv)
         $('#wbs-txt').html(wbsTxt)
+
+        $('#swot-export-json').on('click', function () {
+            let swotJson = {
+    "Strength": `${$('#swot-strength').val()}`,
+    "Weaknessess": `${$('#swot-weaknesses').val()}`,
+    "Opportunities": `${$('#swot-opportunities').val()}`,
+    "Threats": `${$('#swot-threats').val()}`
+}
+            downloadString(JSON.stringify(swotJson, null, 4), 'text/json', 'swot.json')
+        })
+        $('#swot-export-csv').on('click', function () {
+            let swotCsv = `Strength,Weaknessess,Opportunities,Threats
+${$('#swot-strength').val().replace(',',';')},${$('#swot-weaknesses').val().replace(',',';')},${$('#swot-opportunities').val().replace(',',';')},${$('#swot-threats').val().replace(',',';')}`
+            downloadString(swotCsv, 'text/csv', 'swot.csv')
+        })
+        $('#swot-export-txt').on('click', function () {
+            let swotTxt = `Strength: ${$('#swot-strength').val()}
+
+Weaknessess: ${$('#swot-weaknesses').val()}
+
+Opportunities: ${$('#swot-opportunities').val()}
+
+Threats: ${$('#swot-threats').val()}`
+            downloadString(swotTxt, 'text/data', 'swot.txt')
+        })
+
+        $('#wbs-export-json').on('click', function () {
+            downloadString(JSON.stringify(wbsJson, null, 4), 'text/json', 'wbs.json')
+        })
+        $('#wbs-export-csv').on('click', function () {
+            downloadString(wbsCsv, 'text/csv', 'wbs.csv')
+        })
+        $('#wbs-export-txt').on('click', function () {
+            downloadString(wbsTxt, 'text/data', 'wbs.txt')
+        })
+
         $('#color-toggle-button').on('click', function () {
             let currentColor = $('html').attr('data-bs-theme')
             if (currentColor == "dark") {
                 $('html').attr('data-bs-theme', 'light')
                 $('#color-toggle-button').attr('class', 'btn btn-dark')
                 $('#color-toggle-icon').attr('class', 'bi bi-lightbulb')
-
-                // $('#strength-card').css({ 'border-color': '#B76233' })
-                // $('#dexterity-card').css({ 'border-color': '#8B4513' })
-                // $('#constitution-card').css({ 'border-color': '#5A3B29' })
-                // $('#intelligence-card').css({ 'border-color': '#008000' })
-                // $('#wisdom-card').css({ 'border-color': '#800040' })
-                // $('#charisma-card').css({ 'border-color': '#C0C0C0' })
             }
             else {
                 $('html').attr('data-bs-theme', 'dark')
                 $('#color-toggle-button').attr('class', 'btn btn-light')
                 $('#color-toggle-icon').attr('class', 'bi bi-lightbulb-fill')
-
-                // $('#strength-card').css({ 'border-color': '#F7CAC9' })
-                // $('#dexterity-card').css({ 'border-color': '#C7CBA9' })
-                // $('#constitution-card').css({ 'border-color': '#C2F0F0' })
-                // $('#intelligence-card').css({ 'border-color': '#D3E4FC' })
-                // $('#wisdom-card').css({ 'border-color': '#D5EEF3' })
-                // $('#charisma-card').css({ 'border-color': '#FFFCE6' })
             }
         })
     </script>
